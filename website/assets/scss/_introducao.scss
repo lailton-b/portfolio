@@ -1,0 +1,45 @@
+/* Introdução */
+
+.introduction .container {
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  transition: 0.6s ease;
+}
+
+.open-menu .container {
+  margin-top: 60px;
+  transition: 0.6s ease;
+}
+
+.introduction {
+  .introduction__illustration {
+    max-width: 626px;
+    margin: 0px auto 30px;
+  }
+
+  .subtitulo_pequeno:after {
+    margin: 3px auto 20px auto;
+  }
+
+  .introduction__seta_baixo {
+    width: 60px;
+    margin: 0 auto;
+    animation: seta_baixo 1s ease infinite;
+    cursor: pointer;
+  }
+
+  @keyframes seta_baixo {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .introduction__dobra img {
+    top: 1px;
+  }
+}

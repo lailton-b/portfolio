@@ -1,0 +1,28 @@
+/* Fontes */
+
+:root {
+  font-size: 16px;
+}
+
+.titulo {
+  font-size: $titulo;
+  text-align: center;
+}
+
+.subtitulo_1 {
+  font-size: $subtitulo_1;
+}
+
+.subtitulo_2 {
+  font-size: $subtitulo_2;
+  line-height: $subtitulo_2 * 1.4;
+}
+
+.subtitulo_pequeno {
+  font-size: $subtitulo_pequeno;
+}
+
+.corpo_de_texto {
+  font-size: $corpo_de_texto;
+  line-height: $corpo_de_texto * 1.4;
+}

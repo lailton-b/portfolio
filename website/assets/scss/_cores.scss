@@ -1,0 +1,52 @@
+/* Cores */
+
+.titulo {
+  color: $light_cor_secundaria;
+}
+
+.subtitulo_pequeno {
+  color: $light_cor_secundaria;
+
+  &:after {
+    background-color: $light_cor_secundaria;
+  }
+}
+
+.bg_light {
+  background-color: $light_background;
+
+  .titulo,
+  [class^="subtitulo_"],
+  .numero {
+    color: $light_cor_primaria;
+  }
+
+  .corpo_de_texto {
+    color: $light_cor_secundaria;
+  }
+
+  .subtitulo_pequeno {
+    color: $light_cor_primaria;
+
+    &:after {
+      background-color: $light_cor_primaria;
+    }
+  }
+}
+
+.bg_dark {
+  background-color: $dark_background;
+
+  .titulo,
+  [class^="subtitulo_"] {
+    color: $dark_cor_primaria;
+  }
+
+  .corpo_de_texto {
+    color: $dark_cor_secundaria;
+  }
+
+  .subtitulo_pequeno:after {
+    background-color: $dark_cor_primaria;
+  }
+}

@@ -1,0 +1,148 @@
+/* Portfolio */
+
+.dobra img {
+  top: -4px;
+  position: relative;
+}
+
+/* Ilustração */
+
+.portfolio__illustration {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hand,
+.finger,
+.arm {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hand {
+  transform: rotate(0deg);
+  animation: hand 1.3s ease infinite;
+}
+
+.finger {
+  animation: finger 1.3s ease infinite;
+}
+
+.arm {
+  animation: arm 1.3s ease infinite;
+}
+
+@keyframes hand {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(19deg);
+  }
+}
+
+@keyframes finger {
+  0%,
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(0deg) translate(-1px, -1.8px) scale(0.8);
+  }
+}
+
+@keyframes arm {
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* Slide */
+
+.slide {
+  display: flex;
+  overflow: hidden;
+  margin-top: 20px;
+
+  .slide__a_mostra {
+    position: relative;
+    min-width: 168px;
+    height: 243px;
+    border-radius: 10px;
+    margin-right: 8px;
+    background-color: $light_cor_secundaria;
+  }
+
+  .slide__itens {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    li {
+      min-width: 100px;
+      height: 145px;
+      border-radius: 10px;
+      background-color: $light_cor_secundaria;
+    }
+
+    li + li {
+      margin-left: 10px;
+    }
+  }
+
+  .slide__proximo_anterior {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    right: -80px;
+
+    .slide__proximo,
+    .slide__anterior {
+      background-color: transparent;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slide__anterior {
+      margin-right: 8px;
+    }
+  }
+}
+
+.portfolio_slide_2 {
+  .subtitulo_1 {
+    text-align: right;
+
+    &:after {
+      margin: 3px 0 10px auto;
+    }
+  }
+
+  .slide {
+    flex-direction: row-reverse;
+
+    .slide__a_mostra {
+      margin: 0 0 0 8px;
+    }
+
+    .slide__proximo_anterior {
+      left: -80px;
+    }
+  }
+
+  .slide__itens {
+    flex-direction: row-reverse;
+
+    li + li {
+      margin: 0 8px 0 0;
+    }
+  }
+}

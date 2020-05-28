@@ -1,0 +1,74 @@
+/* Geral */
+
+*,
+h1,
+h2,
+h3,
+h4 {
+  font-family: Arial;
+  font-weight: 400;
+}
+
+.subtitulo_2 {
+  margin: 10px 0;
+}
+
+.titulo {
+  margin-bottom: 40px;
+}
+
+.corpo_de_texto {
+  margin: 15px 0;
+}
+
+.container {
+  padding: 40px 15px;
+  margin: 0 auto;
+
+  &.container_left {
+    padding-left: 0px;
+  }
+  &.container_right {
+    padding-right: 0px;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.illustration {
+  margin-bottom: 30px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bg_dark .subtitulo_1:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  margin: 3px 0 10px;
+  background-color: $dark_cor_primaria;
+}
+
+.subtitulo_pequeno {
+  font-weight: bold;
+}
+
+.subtitulo_pequeno:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  margin: 3px 0 10px;
+}
+
+.dobra img {
+  display: block;
+  width: 100%;
+}
