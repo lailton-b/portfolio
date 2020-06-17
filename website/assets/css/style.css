@@ -489,6 +489,10 @@ button {
   }
 }
 /* Geral */
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 h1,
 h2,
