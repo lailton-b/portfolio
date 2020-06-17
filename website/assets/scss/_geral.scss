@@ -9,6 +9,32 @@ h4 {
   font-weight: 400;
 }
 
+a,
+input,
+textarea,
+button {
+  &:focus {
+    outline: solid;
+    outline-width: thin;
+    outline-color: #6c66dd;
+  }
+}
+
+button,
+input,
+textarea {
+  &:hover {
+    outline: solid;
+    outline-width: thin;
+    outline-color: #6c66dd;
+  }
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .subtitulo_2 {
   margin: 10px 0;
 }
@@ -47,28 +73,92 @@ h4 {
   }
 }
 
-.bg_dark .subtitulo_1:after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 1px;
-  margin: 3px 0 10px;
-  background-color: $dark_cor_primaria;
-}
-
-.subtitulo_pequeno {
-  font-weight: bold;
-}
-
-.subtitulo_pequeno:after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 1px;
-  margin: 3px 0 10px;
-}
-
 .dobra img {
   display: block;
   width: 100%;
+}
+
+@media screen and (min-width: 468px) {
+  .container {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    padding-top: 90px;
+
+    &.container_right {
+      padding: 90px 0 0 95px;
+    }
+    &.container_left {
+      padding: 40px 95px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 221px;
+    }
+    &.container_left {
+      padding: 40px 221px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 115px;
+    }
+    &.container_left {
+      padding: 40px 115px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 150px;
+    }
+    &.container_left {
+      padding: 40px 150px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 229px;
+    }
+    &.container_left {
+      padding: 40px 229px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1840px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 357px;
+    }
+    &.container_left {
+      padding: 40px 357px 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    &.container_right {
+      padding: 90px 0 0 387px;
+    }
+    &.container_left {
+      padding: 40px 387px 40px 0;
+    }
+  }
 }

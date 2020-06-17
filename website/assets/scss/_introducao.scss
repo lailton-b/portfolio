@@ -13,12 +13,39 @@
 }
 
 .introduction {
-  .introduction__illustration {
-    max-width: 626px;
+  .introduction__illustration svg {
+    max-width: 100%;
     margin: 0px auto 30px;
+    overflow: visible;
+
+    .woman {
+      transform: translateX(-1500px);
+      animation: woman 0.75s linear forwards;
+    }
+
+    .section_1 {
+      transform: translateX(-30px);
+      animation: section_1 0.125s linear 0.625s forwards;
+    }
+
+    .section_2 {
+      transform: translateY(-20px);
+      animation: section_2 0.75s linear 0.875s forwards;
+    }
   }
 
-  .subtitulo_pequeno:after {
+  .titulo {
+    opacity: 0;
+    animation: opacity 0.25s ease-in 1.875s forwards;
+  }
+
+  .texto_pequeno {
+    transform: translate(17px, -105px) scale(0.3);
+    opacity: 0;
+    animation: texto_pequeno 0.25s ease-in 1.625s forwards;
+  }
+
+  .texto_pequeno:after {
     margin: 3px auto 20px auto;
   }
 
@@ -27,19 +54,133 @@
     margin: 0 auto;
     animation: seta_baixo 1s ease infinite;
     cursor: pointer;
-  }
 
-  @keyframes seta_baixo {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
+    svg path {
+      stroke-dasharray: 52;
+      stroke-dashoffset: 52;
+      animation: stroke 0.5s ease-in 2.125s forwards;
     }
   }
 
   .introduction__dobra img {
     top: 1px;
+  }
+}
+
+/* Responsive */
+
+@media screen and (min-width: 404px) {
+  .introduction .container {
+    max-width: 404px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .introduction .container {
+    max-width: 565px;
+  }
+
+  .introduction .introduction__seta_baixo {
+    width: 75px;
+  }
+
+  .introduction__seta_baixo img {
+    width: 30px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .introduction {
+    background-image: url("../img/lailton_hero_bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 70px;
+  }
+}
+
+/* Animations */
+
+@keyframes woman {
+  0% {
+    transform: translateX(-1500px);
+  }
+  80% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes section_1 {
+  0% {
+    transform: translateX(-30px);
+  }
+  60% {
+    transform: translateX(13px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes section_2 {
+  0% {
+    transform: translate(0px, -20px);
+  }
+
+  15%,
+  45%,
+  75% {
+    transform: translate(3px, -20px);
+  }
+  30%,
+  60%,
+  90% {
+    transform: translate(-3px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes texto_pequeno {
+  0% {
+    transform: translate(17px, -105px) scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dasharray: 52;
+    stroke-dashoffset: 52;
+  }
+  100% {
+    stroke-dasharray: 52;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes seta_baixo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }

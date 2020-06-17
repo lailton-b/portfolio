@@ -12,7 +12,7 @@
 }
 
 .quote blockquote {
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 
   .citacao {
     display: block;
@@ -32,6 +32,45 @@
 
 .quote .quote__dobra:last-child {
   img {
-    top: 1px;
+    top: 4px;
+  }
+}
+
+/* Responsive */
+
+@media screen and (min-width: 767px) {
+  .quote blockquote .citacao {
+    display: block;
+    color: #3f3d56;
+    margin: 3px 0;
+    max-width: 166px;
+  }
+
+  .quote__illustration {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .quote blockquote .citacao {
+    max-width: 100%;
+  }
+
+  .quote__illustration {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1278px) {
+  .quote .citacao {
+    font-size: $subtitulo_1__desk;
+  }
+
+  .quote .autor {
+    font-size: $corpo_de_texto__desk;
+  }
+
+  .quote__illustration {
+    width: 430px;
   }
 }

@@ -1,5 +1,9 @@
 /* Portfolio */
 
+.portfolio .titulo {
+  margin: 40px 0 0px;
+}
+
 .dobra img {
   top: -4px;
   position: relative;
@@ -10,6 +14,8 @@
 .portfolio__illustration {
   display: flex;
   justify-content: flex-end;
+  max-width: 570px;
+  margin: 0 0 30px auto;
 }
 
 .hand,
@@ -71,9 +77,9 @@
   .slide__a_mostra {
     position: relative;
     min-width: 168px;
-    height: 243px;
+    height: 253px;
     border-radius: 10px;
-    margin-right: 8px;
+    margin-right: 10px;
     background-color: $light_cor_secundaria;
   }
 
@@ -83,8 +89,8 @@
     overflow: hidden;
 
     li {
-      min-width: 100px;
-      height: 145px;
+      min-width: 110px;
+      height: 165px;
       border-radius: 10px;
       background-color: $light_cor_secundaria;
     }
@@ -97,7 +103,7 @@
   .slide__proximo_anterior {
     display: flex;
     position: absolute;
-    bottom: 0px;
+    bottom: 1px;
     right: -80px;
 
     .slide__proximo,
@@ -109,10 +115,16 @@
       border: none;
       border-radius: 50%;
       cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        outline: none;
+        transform: scale(1.15);
+      }
     }
 
     .slide__anterior {
-      margin-right: 8px;
+      margin-right: 10px;
     }
   }
 }
@@ -130,7 +142,7 @@
     flex-direction: row-reverse;
 
     .slide__a_mostra {
-      margin: 0 0 0 8px;
+      margin: 0 0 0 10px;
     }
 
     .slide__proximo_anterior {
@@ -142,7 +154,76 @@
     flex-direction: row-reverse;
 
     li + li {
-      margin: 0 8px 0 0;
+      margin: 0 10px 0 0;
     }
+  }
+}
+
+/* Responsivo */
+
+@media screen and (min-width: 700px) {
+  .portfolio__illustration svg {
+    width: 88%;
+    height: 40%;
+  }
+
+  .portfolio_slide_2 .slide {
+    .slide__proximo_anterior {
+      left: -117px;
+    }
+  }
+
+  .slide {
+    .slide__a_mostra {
+      min-width: 328px;
+      height: 493px;
+    }
+
+    .slide__itens {
+      li {
+        min-width: 220px;
+        height: 345px;
+      }
+    }
+
+    .slide__proximo_anterior {
+      right: -117px;
+
+      .slide__proximo,
+      .slide__anterior {
+        width: 50px;
+        height: 50px;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio .titulo {
+    margin: 90px 0 0px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .portfolio__illustration {
+    max-width: 629px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .slide .slide__a_mostra {
+    min-width: 383px;
+    height: 600px;
+  }
+
+  .slide .slide__itens li {
+    min-width: 270px;
+    height: 390px;
   }
 }

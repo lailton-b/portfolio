@@ -4,7 +4,7 @@
   color: $light_cor_secundaria;
 }
 
-.subtitulo_pequeno {
+.texto_pequeno {
   color: $light_cor_secundaria;
 
   &:after {
@@ -25,7 +25,7 @@
     color: $light_cor_secundaria;
   }
 
-  .subtitulo_pequeno {
+  .texto_pequeno {
     color: $light_cor_primaria;
 
     &:after {
@@ -42,11 +42,13 @@
     color: $dark_cor_primaria;
   }
 
-  .corpo_de_texto {
+  .corpo_de_texto,
+  .texto_pequeno {
     color: $dark_cor_secundaria;
+    font-weight: 400;
   }
 
-  .subtitulo_pequeno:after {
+  .texto_pequeno:after {
     background-color: $dark_cor_primaria;
   }
 }

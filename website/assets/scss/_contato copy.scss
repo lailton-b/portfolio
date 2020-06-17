@@ -1,0 +1,115 @@
+/* Contato */
+
+.contato .titulo span {
+  display: block;
+  margin: 3px 0;
+}
+
+.contato .subtitulo_2 {
+  margin-bottom: 20px;
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+.bg_dark .subtitulo_2:after {
+  margin: 0 0 10px;
+}
+
+.bg_dark span.subtitulo_2:after {
+  content: none;
+}
+
+.contato form {
+  margin: 0 auto 40px auto;
+  max-width: 290px;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  label,
+  input,
+  textarea {
+    display: block;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    font-size: $corpo_de_texto;
+    border: 1.5px solid $dark_cor_secundaria;
+    color: $dark_cor_secundaria;
+    background-color: transparent;
+    width: 290px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline: none;
+      outline-width: thin;
+      outline-color: #6c66dd;
+    }
+  }
+
+  textarea {
+    max-width: 290px;
+    min-width: 290px;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 10px;
+  }
+
+  .submit {
+    width: 160px;
+    margin: 0 0 0 auto;
+  }
+}
+
+.contato__redes_sociais {
+  max-width: 290px;
+  margin: 0 auto;
+
+  .identificacao {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover .icone_seta_direita {
+      animation: icone_seta 1s ease-in-out infinite;
+    }
+  }
+
+  .corpo_de_texto {
+    margin: 20px 0 10px;
+    color: $dark_cor_primaria;
+  }
+
+  .texto_pequeno {
+    margin: 0 3px 0 8px;
+  }
+
+  .texto_pequeno:after {
+    content: none;
+  }
+
+  .icone_seta_direita {
+    position: relative;
+    top: 0.5px;
+  }
+
+  .icone_seta_direita_1 {
+    top: -0.5px;
+  }
+}
+
+@keyframes icone_seta {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
