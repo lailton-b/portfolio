@@ -50,6 +50,7 @@ input[type="submit"] {
 .container {
   padding: 40px 15px;
   margin: 0 auto;
+  max-width: 1920px;
 
   &.container_left {
     padding-left: 0px;
@@ -152,7 +153,7 @@ input[type="submit"] {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1919px) {
   .container {
     &.container_right {
       padding: 90px 0 0 387px;

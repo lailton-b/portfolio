@@ -535,6 +535,7 @@ input[type=submit] {
 .container {
   padding: 40px 15px;
   margin: 0 auto;
+  max-width: 1920px;
 }
 .container.container_left {
   padding-left: 0px;
@@ -617,7 +618,7 @@ input[type=submit] {
     padding: 40px 357px 40px 0;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1919px) {
   .container.container_right {
     padding: 90px 0 0 387px;
   }
@@ -911,6 +912,11 @@ header.container {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 70px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .introduction {
+    background-image: none;
   }
 }
 /* Animations */
