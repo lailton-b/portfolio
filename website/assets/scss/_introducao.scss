@@ -50,6 +50,8 @@
   }
 
   .introduction__seta_baixo {
+    display: block;
+    padding-top: 5px;
     width: 60px;
     margin: 0 auto;
     animation: seta_baixo 1s ease infinite;

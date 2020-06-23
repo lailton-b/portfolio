@@ -30,6 +30,24 @@
   .flex {
     position: relative;
 
+    &.nome.invalid:after {
+      content: "Por favor, preencha o nome.";
+    }
+
+    &.email.invalid:after {
+      content: "Por favor, informe um email válido.";
+    }
+
+    &:after {
+      display: block;
+      padding: 4px 10px;
+      color: $light_cor_primaria;
+      border: 2px solid $light_cor_secundaria;
+      position: absolute;
+      right: 0;
+      bottom: -29px;
+    }
+
     input {
       padding-left: 35px;
     }
@@ -133,7 +151,7 @@
   }
 }
 
-@media screen and (min-width: 404px) {
+@media screen and (min-width: 430px) {
   .contato .container {
     max-width: 404px;
   }
@@ -178,6 +196,12 @@
 
   .contato form {
     max-width: 546px;
+
+    .flex {
+      &:after {
+        bottom: -32px;
+      }
+    }
 
     input,
     textarea {
