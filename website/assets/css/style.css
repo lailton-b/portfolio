@@ -855,6 +855,11 @@ header.container {
     margin-left: 10px;
   }
 }
+@media screen and (min-width: 1279px) {
+  header .logo img {
+    width: 110px;
+  }
+}
 /* Introdução */
 .introduction .container {
   flex-direction: column;
@@ -939,6 +944,16 @@ header.container {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-y: 70px;
+  }
+  .introduction .container {
+    max-width: 700px;
+  }
+  .introduction .titulo {
+    max-width: 570px;
+    margin: 0 auto 45px;
+  }
+  .introduction .introduction__seta_baixo svg {
+    transform: scale(1.5);
   }
 }
 @media screen and (min-width: 1921px) {
@@ -1519,4 +1534,10 @@ header.container {
 footer .container {
   margin: 0 auto;
   text-align: right;
+}
+
+@media screen and (min-width: 1279px) {
+  footer img {
+    width: 110px;
+  }
 }

@@ -4,3 +4,9 @@ footer .container {
   margin: 0 auto;
   text-align: right;
 }
+
+@media screen and (min-width: 1279px) {
+  footer img {
+    width: 110px;
+  }
+}
